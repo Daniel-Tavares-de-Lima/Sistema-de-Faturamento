@@ -25,7 +25,7 @@
                   <Button layoutX="31.0" layoutY="85.0" mnemonicParsing="false" onAction="#btnNotas" text="Emissão de Nota Fiscal" />
                   <Button layoutX="37.0" layoutY="160.0" mnemonicParsing="false" onAction="#btnEstoque" text="Controle de Estoque" />
                   <Button layoutX="37.0" layoutY="239.0" mnemonicParsing="false" onAction="#btnClientes" text="Cadastro de Clientes" />
-                  <Button layoutX="24.0" layoutY="316.0" mnemonicParsing="false" text="Contas a Pagar e Receber" />
+                  <Button layoutX="24.0" layoutY="316.0" mnemonicParsing="false" onAction="#btnContas" text="Contas a Pagar e Receber" />
                   <Button layoutX="57.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnMain" text="Tela Principal" />
                   <Button layoutX="62.0" layoutY="437.0" mnemonicParsing="false" text="Lorem ipsum" />
                </children>

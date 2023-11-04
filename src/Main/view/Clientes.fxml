@@ -4,6 +4,7 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.Tab?>
@@ -18,16 +19,16 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="negocio.ClienteController">
    <children>
       <SplitPane orientation="VERTICAL" prefHeight="90.0" prefWidth="800.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <Button layoutX="26.0" layoutY="32.0" mnemonicParsing="false" prefWidth="160.0" text="Emissão de Nota Fiscal" />
-                  <Button layoutX="217.0" layoutY="32.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="Controle de Estoque" />
-                  <Button layoutX="416.0" layoutY="32.0" mnemonicParsing="false" prefWidth="160.0" text="Cadastro de Clientes" />
-                  <Button layoutX="611.0" layoutY="32.0" mnemonicParsing="false" prefWidth="160.0" text="Contas a Pagar e Receber" />
+                  <Button layoutX="26.0" layoutY="32.0" mnemonicParsing="false" onAction="#btnNotas" prefWidth="160.0" text="Emissão de Nota Fiscal" />
+                  <Button layoutX="217.0" layoutY="32.0" mnemonicParsing="false" onAction="#btnEstoque" prefHeight="25.0" prefWidth="160.0" text="Controle de Estoque" />
+                  <Button layoutX="416.0" layoutY="32.0" mnemonicParsing="false" onAction="#btnClientes" prefWidth="160.0" text="Cadastro de Clientes" />
+                  <Button layoutX="611.0" layoutY="32.0" mnemonicParsing="false" onAction="#btnContas" prefWidth="160.0" text="Contas a Pagar e Receber" />
                </children>
             </AnchorPane>
         </items>
@@ -105,6 +106,7 @@
                         <RadioButton layoutX="544.0" layoutY="279.0" mnemonicParsing="false" text="Regular" />
                         <RadioButton layoutX="613.0" layoutY="279.0" mnemonicParsing="false" text="Bom" />
                         <RadioButton layoutX="662.0" layoutY="279.0" mnemonicParsing="false" text="Ótimo" />
+                        <Button layoutX="343.0" layoutY="374.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="113.0" text="Adicionar" />
                      </children>
                   </AnchorPane>
             </content>
@@ -119,9 +121,13 @@
                             <TableColumn prefWidth="151.0" text="Razão Social" />
                               <TableColumn prefWidth="161.0" text="Atividade" />
                               <TableColumn prefWidth="161.0" text="Faturamento " />
-                              <TableColumn prefWidth="181.0" text="Opnião" />
+                              <TableColumn prefWidth="62.0" text="Opnião 1 " />
+                              <TableColumn prefWidth="61.0" text="Opnião 2" />
+                              <TableColumn prefWidth="58.0" text="Opnião 3" />
                           </columns>
                         </TableView>
+                        <ComboBox layoutX="324.0" layoutY="275.0" prefWidth="150.0" promptText="Estatísticas" />
+                        <ListView layoutX="329.0" layoutY="319.0" prefHeight="143.0" prefWidth="141.0" />
                      </children>
                   </AnchorPane>
             </content>

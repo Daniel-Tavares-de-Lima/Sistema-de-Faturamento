@@ -2,38 +2,25 @@ package negocio;
 
 import beans.TelasEnum;
 import javafx.event.ActionEvent;
-
+import javafx.fxml.FXML;
 import Main.App;
 
-
-import javafx.fxml.FXML;
-
-public class MainController {
-    
-    @FXML
-    protected void btnMain(ActionEvent e){
-        App.mudarTela(TelasEnum.MAIN);
-        System.out.println("Oi");
-    }
+public class NotaFiscalController {
+    //CONTROLE DE PASSAGEM DE TELA
     @FXML
     protected void btnNotas(ActionEvent e){
         App.mudarTela(TelasEnum.NOTASFISCAIS);
     }
-    
     @FXML
     protected void btnEstoque(ActionEvent e){
         App.mudarTela(TelasEnum.ESTOQUE);
     }
-
-    @FXML 
+    @FXML
     protected void btnClientes(ActionEvent e){
         App.mudarTela(TelasEnum.CLIENTES);
     }
-
     @FXML
     protected void btnContas(ActionEvent e){
         App.mudarTela(TelasEnum.CONTAS);
     }
-   
-    
 }

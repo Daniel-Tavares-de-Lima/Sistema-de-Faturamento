@@ -17,6 +17,7 @@ public class App extends Application{
     private static Scene cdtsNotas;
     private static Scene cdtsEstoque;
     private static Scene clientes;
+    private static Scene contas;
    
     /*---------- */
 
@@ -60,6 +61,14 @@ public class App extends Application{
         }catch(Exception e){
             System.out.println("Não foi possivel fazer esse procedimento tente novamente. ERROR: " + e.getMessage());
         }
+
+        //----TELA CONTAS
+        try{
+            Parent fxmlContas = FXMLLoader.load(this.getClass().getResource("./view/contas.fxml"));
+            contas = new Scene(fxmlContas,800,600);
+        }catch(Exception e){
+            System.out.println("Não foi possivel fazer esse procedimento tente novamente. ERROR: " + e.getMessage());
+        }
         
         
         primayStage.setScene(mainSistema);
@@ -95,6 +104,10 @@ public class App extends Application{
                 stage.setScene(clientes);
                 mudarTela.notificar(TelasEnum.CLIENTES, userData);
                 break;
+
+            case CONTAS:
+                stage.setScene(contas);
+                mudarTela.notificar(TelasEnum.CONTAS, userData);  
         }
     }
 
